@@ -1,7 +1,7 @@
 ---
 title: GCP - Resource Manager
 date: 2021-01-01 11:11:11 -0400
-categories: [21GCP]
+categories: [01GCP, Storage]
 tags: [GCP]
 toc: true
 image:

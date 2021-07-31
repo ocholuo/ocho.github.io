@@ -1,7 +1,7 @@
 ---
 title: GCP - Gcloud Commnad
 date: 2021-01-01 11:11:11 -0400
-categories: [21GCP]
+categories: [01GCP]
 tags: [GCP]
 toc: true
 image:
@@ -11,6 +11,7 @@ image:
   - [Network](#network)
   - [firewall](#firewall)
   - [instance](#instance)
+  - [VPN](#vpn)
   - [storage](#storage)
   - [Cloud SQL](#cloud-sql)
 
@@ -22,6 +23,7 @@ image:
 
 ## Network
 
+PASSWD
 
 ```bash
 # Creating network
@@ -158,6 +160,72 @@ gcloud auth activate-service-account --key-file credentials.json
 ```
 
 
+## VPN
+
+
+```bash
+# Create the vpn-1 gateway and tunnel1to2
+gcloud compute target-vpn-gateways create vpn-1 \
+  --project=qwiklabs-gcp-04-6d5e14c9499f \
+  --region=us-central1 \
+  --network=vpn-network-1
+
+gcloud compute forwarding-rules create vpn-1-rule-esp \
+  --project=qwiklabs-gcp-04-6d5e14c9499f \
+  --region=us-central1 \
+  --address=35.184.104.113 \
+  --ip-protocol=ESP \
+  --target-vpn-gateway=vpn-1
+
+gcloud compute forwarding-rules create vpn-1-rule-udp500 \
+  --project=qwiklabs-gcp-04-6d5e14c9499f \
+  --region=us-central1 \
+  --address=35.184.104.113 \
+  --ip-protocol=UDP \
+  --ports=500 \
+  --target-vpn-gateway=vpn-1
+
+gcloud compute forwarding-rules create vpn-1-rule-udp4500 \
+  --project=qwiklabs-gcp-04-6d5e14c9499f \
+  --region=us-central1 \
+  --address=35.184.104.113 \
+  --ip-protocol=UDP \
+  --ports=4500 \
+  --target-vpn-gateway=vpn-1
+
+gcloud compute vpn-tunnels create tunnel1to2 \
+  --project=qwiklabs-gcp-04-6d5e14c9499f \
+  --region=us-central1 \
+  --peer-address=104.199.49.195 \
+  --shared-secret=PASSWD \
+  --ike-version=2 \
+  --target-vpn-gateway=vpn-1
+
+
+gcloud compute routes create tunnel1to2 \
+  --project=qwiklabs-gcp-04-6d5e14c9499f \
+  --network=vpn-network-1 \
+  --priority=1000 \
+  --destination-range=10.1.3.0/24 \
+  --next-hop-vpn-tunnel=tunnel1to2 \
+  --next-hop-vpn-tunnel-region=us-central1
+
+
+
+gcloud compute routes create tunnel2to1 \
+  --project=qwiklabs-gcp-04-6d5e14c9499f \
+  --network=vpn-network-2 \
+  --priority=1000 \
+  --destination-range=10.5.4.0/24 \
+  --next-hop-vpn-tunnel=tunnel2to1 \
+  --next-hop-vpn-tunnel-region=europe-west1
+
+
+
+```
+
+
+---
 
 
 ## storage

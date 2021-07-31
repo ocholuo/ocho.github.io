@@ -1,7 +1,7 @@
 ---
 title: GCP - Development in the cloud
 date: 2021-01-01 11:11:11 -0400
-categories: [21GCP]
+categories: [01GCP, Compute]
 tags: [GCP]
 toc: true
 image:
@@ -13,6 +13,7 @@ image:
   - [Infrastructure as code](#infrastructure-as-code)
     - [Deployment Manager `declarative rather than imperative`](#deployment-manager-declarative-rather-than-imperative)
   - [Proactive instrumentation: Stackdriver](#proactive-instrumentation-stackdriver)
+    - [Stackdriver](#stackdriver)
     - [Stackdriver Monitoring](#stackdriver-monitoring)
     - [Stackdriver Logging](#stackdriver-logging)
     - [Stackdriver Error Reporting](#stackdriver-error-reporting)

@@ -1,7 +1,7 @@
 ---
 title: GCP - IdenAccessManage - Zero-trust BeyondCorp
 date: 2021-01-04 11:11:11 -0400
-categories: [21GCP]
+categories: [01GCP, Identity]
 tags: [GCP]
 toc: true
 image:
