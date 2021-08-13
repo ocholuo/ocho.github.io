@@ -7,7 +7,22 @@ img: /assets/img/sample/rabbit.png
 tags: [Python]
 ---
 
-[toc]
+- [Python Crash](#python-crash)
+  - [String](#string)
+  - [List](#list)
+  - [dictonary](#dictonary)
+  - [Tuple](#tuple)
+  - [Sorted](#sorted)
+  - [Functions](#functions)
+  - [lambda](#lambda)
+  - [zip, map filter](#zip-map-filter)
+  - [test](#test)
+  - [except](#except)
+  - [RegularExpression](#regularexpression)
+  - [Data collect](#data-collect)
+  - [Network with PY](#network-with-py)
+  - [class](#class)
+- [images](#images)
 
 ---
 
