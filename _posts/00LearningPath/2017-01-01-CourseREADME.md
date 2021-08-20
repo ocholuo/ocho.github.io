@@ -149,6 +149,11 @@ Security |  Mark |
 💾  **[CourseraLink] [UMich](https://www.coursera.org/umich)** - Main Page |
 💾  **[CourseraLink] [DukeU](https://www.coursera.org/duke)** - Main Page |
 | :--------------------------------------------------------------------------------------------------- | :--- |
+💾  **Kaggle - Machine Learning** | ✏️
+[ML - Python](https://www.kaggle.com/learn/python) 100% 8/13/21 | ✔️
+[ML - Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) 100% 8/13/21 | ✔️
+[ML - Intermediate Machine Learning](https://www.kaggle.com/learn/intermediate-machine-learning) | ✏️
+| :--------------------------------------------------------------------------------------------------- | :--- |
 💾  **Runestone** | ✏️
 [Problem Solving with Algorithms and Data Structures using Python](https://runestone.academy/runestone/book/published/pythonds/index.html) | ✏️
 | :--------------------------------------------------------------------------------------------------- | :--- |
