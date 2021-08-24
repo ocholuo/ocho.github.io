@@ -17,7 +17,6 @@ image:
 
 # Unittest
 
-
 - “测试驱动开发”（TDD：Test-Driven Development），单元测试就不陌生。
 - 单元测试是用来对一个模块、一个函数或者一个类来进行正确性检验的测试工作。
 
@@ -68,6 +67,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
+---
 
 ## example1
 
@@ -76,13 +76,11 @@ if __name__ == '__main__':
 ```py
 # 这个类的行为和`dict`一致，但是可以通过属性来访问
 # 用起来就像下面这样：
-
 >>> d = Dict(a=1, b=2)
 >>> d['a']
 1
 >>> d.a
 1
-
 
 # `mydict.py`代码如下：
 class Dict(dict):
@@ -102,7 +100,6 @@ class Dict(dict):
 
 # 为了编写单元测试，需要引入Python自带的`unittest`模块
 # 编写`mydict_test.py`如下：
-
 import unittest
 from mydict import Dict
 
@@ -151,7 +148,7 @@ class TestDict(unittest.TestCase):
         ```
 
 
-   - 期待抛出指定类型的Error，
+   - 期待抛出指定类型的`Error self.assertRaises()`，
 
         ```py
         # 比如通过`d['empty']`访问不存在的key时，断言会抛出`KeyError`：
@@ -162,6 +159,8 @@ class TestDict(unittest.TestCase):
         with self.assertRaises(AttributeError):
             value = d.empty
         ```
+
+---
 
 ## 运行单元测试
 
@@ -190,6 +189,8 @@ Ran 5 tests in 0.000s
 OK
 ```
 
+
+---
 
 # setUp与tearDown
 

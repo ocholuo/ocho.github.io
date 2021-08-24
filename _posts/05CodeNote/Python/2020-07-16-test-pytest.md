@@ -1,6 +1,6 @@
 ---
 title: Python Pytest
-date: 2019-10-11 11:11:11 -0400
+date: 2020-07-16 11:11:11 -0400
 description:
 categories: [1CodeNote, PythonNote]
 img: /assets/img/sample/rabbit.png
