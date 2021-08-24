@@ -1,11 +1,14 @@
 ---
 title: ML lab - Titanic-ML-from-Disaster
-date: 2019-10-11 11:11:11 -0400
+date: 2021-08-11 11:11:11 -0400
 categories: [1CodeNote, MLNote]
 tags: [ML]
 toc: true
 ---
 
+- [ML Lab - Titanic - Machine Learning from Disaster](#ml-lab---titanic---machine-learning-from-disaster)
+
+---
 
 # ML Lab - Titanic - Machine Learning from Disaster 
 
